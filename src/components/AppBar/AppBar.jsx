@@ -1,16 +1,24 @@
-import { Navigation } from '../Navigation/Navigation';
-import { UserMenu } from '../UserMenu/UserMenu';
-import { AuthNav } from '../AuthNav/AuthNav';
-import { useAuth } from 'hooks';
-import css from './AppBar.module.css';
+import { AuthNav } from 'components/AuthNav/AuthNav';
+// import { Header } from './AppBar.styled';
+import { Navigation } from 'components/Navigation/Navigation';
+import { useAuth } from 'hooks/useAuth';
+import { UserMenu } from 'components/UserMenu/UserMenu';
+import { AppBar, Toolbar } from '@mui/material';
 
-export const AppBar = () => {
+export const MyAppBar = () => {
   const { isLoggedIn } = useAuth();
-
   return (
-    <header className={css.header}>
-      <Navigation />
-      {isLoggedIn ? <UserMenu /> : <AuthNav />}
-    </header>
+    <AppBar position="static">
+      <Toolbar
+        sx={{
+          display: 'flex',
+          fontSize: 18,
+          justifyContent: 'space-between',
+        }}
+      >
+        <Navigation />
+        {isLoggedIn ? <UserMenu /> : <AuthNav />}
+      </Toolbar>
+    </AppBar>
   );
 };
