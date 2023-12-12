@@ -37,7 +37,7 @@ export const ButtonStyle = styled.button`
 `;
 export const avatarStyle = {
   m: 1,
-  bgcolor: 'gold',
+  bgcolor: 'secondary.main',
 };
 export const toolbarStyle = {
   display: 'flex',

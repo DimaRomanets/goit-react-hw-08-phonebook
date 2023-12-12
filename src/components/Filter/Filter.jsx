@@ -39,5 +39,16 @@ export const Filter = () => {
         // pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
       />
     </Box>
+    // <LabelStyle>
+    //   Find contacts by name:
+    //   <InputStyle
+    //     type="text"
+    //     name="filter"
+    //     value={filterPhoneBook}
+    //     title="Enter the name"
+    //     required
+    //     onChange={onChangeFilter}
+    //   />
+    // </LabelStyle>
   );
 };

@@ -12,6 +12,6 @@ export const Link = styled(NavLink)`
   font-size: 20px;
 
   &:hover {
-    color: gold;
+    color: #59b2ff;
   }
 `;
